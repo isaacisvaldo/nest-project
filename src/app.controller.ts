@@ -7,7 +7,8 @@ export class AppController {
 
   @Get()
   @Render('index')
-  root() {
-    return { message: 'Hello World!' };
+  render() {
+    const message = this.appService.getHello();
+    return { message };
   }
 }
